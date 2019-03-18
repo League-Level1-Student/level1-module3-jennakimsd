@@ -1,8 +1,8 @@
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2018
  *    Level 1
  */
-
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -25,21 +25,25 @@ public class Jukebox implements Runnable {
 		SwingUtilities.invokeLater(new Jukebox());
 	}
 
-           public void run() {
+	public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
 		// 4. Create a Song
-
+		Song cool = new Song("Miley Cyrus - Party In The U.S.A. (Official Music Video).mp3");
+		Song nice = new Song("OneRepublic - Secrets.mp3");
+		Song wow = new Song("Journey - Don't Stop Believin' (Audio).mp3");
 		// 5. Play the Song
-
+		cool.play();
+		nice.play();
+		wow.play();
 		/*
-		 * 6. Create a user interface for your Jukebox so that the user can to
-		 * choose which song to play. You can use can use a different button for
-		 * each song, or a picture of the album cover. When the button or album
-		 * cover is clicked, stop the currently playing song, and play the one
-		 * that was selected.
+		 * 6. Create a user interface for your Jukebox so that the user can to choose
+		 * which song to play. You can use can use a different button for each song, or
+		 * a picture of the album cover. When the button or album cover is clicked, stop
+		 * the currently playing song, and play the one that was selected.
 		 */
-          }
+	}
+
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
 		URL imageURL = getClass().getResource(fileName);
@@ -57,8 +61,7 @@ class Song {
 	private InputStream songStream;
 
 	/**
-	 * Songs can be constructed from files on your computer or Internet
-	 * addresses.
+	 * Songs can be constructed from files on your computer or Internet addresses.
 	 * 
 	 * Examples: <code> 
 	 * 		new Song("everywhere.mp3"); 	//from default package 
@@ -133,4 +136,3 @@ class Song {
 		}
 	}
 }
-
