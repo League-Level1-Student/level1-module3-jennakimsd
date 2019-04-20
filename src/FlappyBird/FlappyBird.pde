@@ -38,8 +38,8 @@ void draw(){
   pipeX-=1;
   rect(pipeX, upperPipeHeight + 100, 40, 600-(upperPipeHeight + 100));
   teleportPipes();
-  score++;
-  text("your score is " + score, 100, 100);
+  fill(#000000);
+  text("your score is " + score, 20, 30);
 }
 
 void mousePressed(){
@@ -50,6 +50,7 @@ void teleportPipes(){
   if(pipeX== 0){
     pipeX=600;
     upperPipeHeight = (int) random(100, 400);
+    score++;
   }
 }
 boolean intersectsPipes() { 
